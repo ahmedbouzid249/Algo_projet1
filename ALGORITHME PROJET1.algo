@@ -1,0 +1,28 @@
+ALGORITHME PROJET1
+VAR
+    phrase : chaine;
+    nbm,i,long,nbv:entier;
+
+
+BEGIN
+    LIRE(phrase);
+    long:=1;
+    i:=0;
+    WHILE (phrase[i]!=".") DO
+        long:=long+1;
+    END_WHILE
+
+    nbm:=1;
+    nbv:=0;
+    FOR i FROM 1 TO long STEP 1 DO
+        if (phrase[i]=" ") then
+            nbm:=nbm+1;
+        end_if
+        if phrase[i] dans {"A","E","Y","U","I","O","a","e","y","u","i","o"} then
+            nbv:=nbv+1;
+        end_if
+            
+    end_for
+    Ecrire(long,nbm,nbv);
+END
+
