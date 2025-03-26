@@ -1,0 +1,51 @@
+ALGORITHME PROJET1
+VAR
+    set1,set2:ARRAY_OF INTEGER[20];
+    i,j,s,n,m:INTEGER;
+    trv:booleen;
+    
+BEGIN
+    ecrire("taille tableau 1 :");
+    lire(n)
+    ecrire(taille tableau 2 :")         
+    lire(m)
+    for i form 0 to n-1 step1 do
+        lire (set1[i])
+    end_for
+    for i from 1 to m-1 step1 do
+        lire(set2[i])
+    end_for   
+    s=0
+    for i from 0 to n-1 do 
+        trv := false
+        j:=0    
+        while (j<m)and(trv=false) do 
+            if  ( set1 [i]=set2[j]) then 
+                trv :=true
+            else   
+                j:=j+1
+            end_if
+        END_WHILE
+        if trv = false then 
+            s:=s+set1[i]
+        end_if
+        END_WHILE
+    end_for
+
+    for i from 0 to m-1 do 
+        trv := false
+        j:=0    
+        while (j<n)and(trv=false) do 
+            if  ( set2 [i]=set1[j]) then 
+                trv :=true
+            else   
+                j:=j+1
+            end_if
+        END_WHILE
+        if trv = false then 
+            s:=s+set2[i]
+        end_if
+        END_WHILE
+    end_for
+    ecrire(s)
+END.
